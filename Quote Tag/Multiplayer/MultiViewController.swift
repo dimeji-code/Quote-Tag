@@ -1,10 +1,10 @@
 //
 //  MultiViewController.swift
-//  Smite
+//  QuoteTag
 //
 //  Created by Dimeji Situ on 2019-06-15.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.
-//
+// 
 
 import UIKit
 import AVFoundation
@@ -24,9 +24,9 @@ class MultiViewController: UIViewController {
     var score1: Int = 0
     var score2: Int = 0
     var timeOp : [Int] = [5,6,7]
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer : AVAudioPlayer?
     var num: Int = 1
-
+    var imgname : String = ""
     var count: Int = 0
     var list : [String ] = []
     var pl : [UIImageView] = []
@@ -38,23 +38,22 @@ class MultiViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    private func initializePlayer() -> AVAudioPlayer? {
+        guard let path = Bundle.main.path(forResource: "music", ofType: "mp3") else {
+            return nil
+        }
+
+        return try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+    }
         
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 
-        do{
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "go", ofType: "wav")!))
-            audioPlayer.prepareToPlay()
-            var audiosession = AVAudioSession.sharedInstance()
-            do{
-                print("goooooooooooooooooooo wwwwwwwwaaaaavvvvvvvvvvvvv")
-                try audiosession.setCategory(AVAudioSession.Category.playback)
-            }catch{
-                print(error)
-            }
-        }catch{
-            print(error)
-        }
+        
+        audioPlayer = initializePlayer()
+        audioPlayer?.play()
+
         super.viewDidLoad()
         first.append(player2) 
         pl = [img1, img2]
@@ -75,12 +74,27 @@ class MultiViewController: UIViewController {
             }else if index == "Game Of Thrones"{
                 let got = GameOfThrones()
                 multiQB.append(contentsOf: (got).list )
-            }else if index == "Bible"{
-                let bible = Bible()
-                multiQB.append(contentsOf: (bible).list )
+            }else if index == "Umbrella Academy"{
+                let ua = UmbrellaAcademy()
+                multiQB.append(contentsOf: (ua).list )
             }else if index == "The 100"{
                 let the100 = The100()
                 multiQB.append(contentsOf: (the100).list )
+            }else if index == "Big Bang Theory"{
+                let bbt = BigBangTheory()
+                multiQB.append(contentsOf: (bbt).list )
+            }else if index == "Fast And Furious"{
+                let faf = FastAndFurious()
+                multiQB.append(contentsOf: (faf).list )
+            }else if index == "Stranger Things"{
+                let st = StrangerThings()
+                multiQB.append(contentsOf: (st).list )
+            }else if index == "Agents Of Shield"{
+                let maos = AgentsOfShield()
+                multiQB.append(contentsOf: (maos).list )
+            }else if index == "Grownish"{
+                let gr = Grownish()
+                multiQB.append(contentsOf: (gr).list )
             }
         }
         multiQB.shuffle()
@@ -97,9 +111,9 @@ class MultiViewController: UIViewController {
                 self.center.image = UIImage.init(named: "go")
                 self.button2.isEnabled = true
                 self.button1.isEnabled = true
-                self.audioPlayer.play()
+                self.audioPlayer?.play()
             })
-            audioPlayer.play()
+            audioPlayer?.play()
         }
 
     }
@@ -168,6 +182,7 @@ class MultiViewController: UIViewController {
             desVC.score1 = score1
             desVC.score2 = score2
             desVC.num = num
+            desVC.imgname = imgname
             if (first[0].name == player1.name){
                 desVC.player = "player1"
                 desVC.tap1 = tap1 + 1

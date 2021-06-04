@@ -8,23 +8,21 @@
 
 import UIKit
 
-class PB: UIViewController {
+class PageTwoVC: UIViewController {
 
+    @IBOutlet weak var img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        img.image = UIImage.init(named: "b")
+        img.layer.shadowColor = UIColor.black.cgColor
+        img.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        img.layer.shadowRadius = 5.0
+        img.layer.shadowOpacity = 1.8
+        img.layer.masksToBounds = false
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

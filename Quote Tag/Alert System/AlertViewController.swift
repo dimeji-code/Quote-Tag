@@ -1,6 +1,6 @@
 //
 //  AlertViewController.swift
-//  Smite
+//  Quote Tag
 //
 //  Created by Dimeji Situ on 2019-05-27.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.

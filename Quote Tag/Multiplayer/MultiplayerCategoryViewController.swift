@@ -1,6 +1,6 @@
 //
 //  MultiplayerCategoryViewController.swift
-//  Smite
+//  QuoteTag
 //
 //  Created by Dimeji Situ on 2019-06-18.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.
@@ -11,9 +11,9 @@ import UIKit
 
 class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     let v = CollectionViewController()
-    var c : [String] = []
-    var count: Int = 0
-    var num = 0
+    var c : [String] = [] //List of selected quote libraries
+    var count: Int = 0 //Number of quote libraries
+    var num = 0 //NUMBER OF QUOTES TICKED
 
     @IBOutlet weak var b1: UIButton!
     @IBOutlet weak var b2: UIButton!
@@ -36,6 +36,8 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             if (c.contains((tableView.cellForRow(at: indexPath)?.textLabel!.text)!)){
+                print("c.count")
+                print(c.count)
                 var i = 0
                 while i < c.count{
                     if (c[i] == tableView.cellForRow(at: indexPath)?.textLabel!.text){
@@ -46,6 +48,8 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
                     }
                     i+=1
                 }
+                print("c.count")
+                print(c.count)
 
             }
             
@@ -77,7 +81,8 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
     
 
     @IBAction func enterPressed(_ sender: UIButton) {
-        if (count != 0 && c.isEmpty == false){
+      
+        if (count != 0 && c.isEmpty == false && count < num){
             performSegue(withIdentifier: "toTap", sender: self)
             
         }
@@ -115,13 +120,39 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
             num = num - the100.list.count
             print(num)
 
-        }else if unchoose == "Bible"{
-            let bible = Bible()
-            num = num - bible.list.count
+        }else if unchoose == "Umbrella Academy"{
+            let ua = UmbrellaAcademy()
+            num = num - ua.list.count
             print(num)
 
+        }else if unchoose == "Big Bang Theory"{
+            let bbt = BigBangTheory()
+            num = num - bbt.list.count
+            print(num)
+            
+        }else if unchoose == "Stranger Things"{
+            let st = StrangerThings()
+            num = num - st.list.count
+            print(num)
+                        
+        }else if unchoose == "Fast And Furious"{
+            let faf = FastAndFurious()
+            num = num - faf.list.count
+            print(num)
+            
+        }else if unchoose == "Grownish"{
+            let grownish = Grownish()
+            num = num - grownish.list.count
+            print(num)
+            
+        }else if unchoose == "Agents Of Shield"{
+            let maos = AgentsOfShield()
+            num = num - maos.list.count
+            print(num)
+            
         }
     }
+    
     //count checkmarked categories
     func countChosen(index : String){
             if index == "Avengers" {
@@ -132,33 +163,69 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
                 print("AVENGERS C0UNT->>", av.list.count)
             }else if index == "DC Universe"{
                 let dc = DCUniverse()
-                num = num + dc.list.count
+                num += dc.list.count
                 print(num)
 
                 print("DC C0UNT->>", dc.list.count)
 
             }else if index == "Game Of Thrones"{
                 let got = GameOfThrones()
-                num = num + got.list.count
+                num += got.list.count
                 print(num)
 
                 print("got C0UNT->>", got.list.count)
 
             }else if index == "The 100"{
                 let the100 = The100()
-                num = num + the100.list.count
+                num += the100.list.count
                 print(num)
 
                 print("the 100 C0UNT->>", the100.list.count)
 
-            }else if index == "Bible"{
-                let bible = Bible()
-                num = num + bible.list.count
+            }else if index == "Umbrella Academy"{
+                let ua = UmbrellaAcademy()
+                num += ua.list.count
                 print(num)
 
-                print("bible C0UNT->>", bible.list.count)
+                print("bible C0UNT->>", ua.list.count)
 
-            }
+            }else if index == "Big Bang Theory"{
+                let bbt = BigBangTheory()
+                num += bbt.list.count
+                print(num)
+                
+                print("big bang theory C0UNT->>", bbt.list.count)
+                
+            }else if index == "Stranger Things"{
+                let st = StrangerThings()
+                num += st.list.count
+                print(num)
+                
+                print("Stranger Things->>", st.list.count)
+                
+            }else if index == "Fast And Furious"{
+                let faf = FastAndFurious()
+                num = num + faf.list.count
+                print(num)
+                
+                print("Fast and Furious C0UNT->>", faf.list.count)
+                
+            }else if index == "Agents Of Shield"{
+                let maos = AgentsOfShield()
+                num += maos.list.count
+                print(num)
+                
+                print("Agents of shield C0UNT->>", maos.list.count)
+                
+            }else if index == "Grownish"{
+                let grownish = Grownish()
+                num = num + grownish.list.count
+                print(num)
+                
+                print("Grownish C0UNT->>", grownish.list.count)
+                
+        }
+
     }
     
     @IBAction func selectNum(_ sender: UIButton) {
@@ -166,9 +233,9 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
         print("COUNT",count)
         
         if sender.tag == 0{
-            count = 5
+            count = 8
         }else if sender.tag == 1{
-            count = 20
+            count = 15
         }else if sender.tag == 2{
             count = 30
         }
@@ -194,7 +261,7 @@ class MultiplayerCategoryViewController: UIViewController , UITableViewDelegate,
         }
     }
     
-    
+
     
 
 

@@ -15,7 +15,6 @@ class MultiPlayerVC: UIViewController {
     @IBOutlet weak var pgctrl: UIPageControl!
     
     override func viewDidLoad() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         super.viewDidLoad()
 
@@ -37,10 +36,6 @@ class MultiPlayerVC: UIViewController {
         pgctrl.layer.shadowOpacity = 1.8
         pgctrl.layer.masksToBounds = false
     }
-    
-//    @IBAction func pageControl(_ sender: Any) {
-//
-//    }
     
 
 }

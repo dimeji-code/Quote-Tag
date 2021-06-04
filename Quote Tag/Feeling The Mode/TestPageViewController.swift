@@ -14,19 +14,23 @@ class TestPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
     lazy var subViewControllers: [UIViewController] = {
         return [
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SingleVC") as! SingleVC,        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MultiPlayerVC") as! MultiPlayerVC,        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
+            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SingleVC") as! SingleVC,    UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MultiPlayerVC") as! MultiPlayerVC,        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
 
         ]
     }()
     
     var currentInd = 0
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
         dataSource = self //as! UIPageViewControllerDataSource
         delegate = self //as! UIPageViewControllerDelegate
         setViewControllerFromIndex(index: 0)
+        
     }
+    
     func setViewControllerFromIndex(index: Int){
         self.setViewControllers([subViewControllers[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
     }

@@ -1,6 +1,6 @@
 //
 //  PlayViewController.swift
-//  Smite
+//  Quote Tag
 //
 //  Created by Dimeji Situ on 2019-05-21.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.
@@ -41,8 +41,14 @@ class PlayViewController: UIViewController {
         if (category == "Avengers"){  qb = Avengers() }
         else if (category == "DC Universe"){  qb = DCUniverse() }
         else if (category == "Game Of Thrones") { qb = GameOfThrones()}
-        else if (category == "Bible") { qb = Bible()}
+        else if (category == "Bible") { qb = UmbrellaAcademy()}
         else if (category == "The 100") { qb = The100()}
+        else if (category == "Big Bang Theory") { qb = BigBangTheory()}
+        else if (category == "Umbrella Academy") { qb = UmbrellaAcademy()}
+        else if (category == "Stranger Things") { qb = StrangerThings()}
+        else if (category == "Fast And Furious") { qb = FastAndFurious()}
+        else if (category == "Agents OfShield") { qb = AgentsOfShield()}
+        else if (category == "Grownish") { qb = Grownish()}
 
         score.text = "0/X"
         qb.list.shuffle()

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PageFourVC: UIViewController {
+class PageFiveV: UIViewController {
 
+    @IBOutlet weak var img: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

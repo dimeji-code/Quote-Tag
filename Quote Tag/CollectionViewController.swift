@@ -1,6 +1,6 @@
 //
 //  CollectionViewController.swift
-//  Smite
+//  Quote Tag
 //
 //  Created by Dimeji Situ on 2019-05-20.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.
@@ -10,9 +10,20 @@ import UIKit
 var category = ""
 
 class CollectionViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
    
-    var list: [String] = ["Avengers", "DC Universe", "Game Of Thrones", "Bible","The 100"]
-    var imgList: [String] = ["AVG","DC","GOT", "bible","100"]
+    var list: [String] = ["Avengers", "DC Universe", "Game Of Thrones", "Umbrella Academy","The 100", "Big Bang Theory","Stranger Things", "Fast And Furious","Grownish", "Agents Of Shield"]
+    var imgList: [String] = ["AVG","DC","GOT", "UA","100","BBT","st","faf","grownish", "MAOS"]
+    
+    
+    override func viewDidLoad() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (list.count)
@@ -47,11 +58,6 @@ class CollectionViewController: UIViewController,UICollectionViewDelegate,UIColl
 
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     @IBAction func unwindToCVC(_ sender: UIStoryboardSegue){}
 

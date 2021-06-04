@@ -8,12 +8,23 @@
 
 import UIKit
 
-class Lucifer: UIViewController {
+class Lucifer: QuoteBank{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override  init() {
+        super.init()
+        
+        
+                list.append(Quotes(q: "\"I’m like walking heroin. Very habit-forming. It never ends well\"", a: "Lucifer", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","RedSkull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
+                list.append(Quotes(q: "\".\"", a: "Thanos", f: ["Dormmammu","Killmonger","Red Skull"] ))
 
-        // Do any additional setup after loading the view.
+
     }
     
 

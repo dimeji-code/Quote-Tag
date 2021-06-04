@@ -16,7 +16,6 @@ class SingleVC: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         super.viewDidLoad()
 

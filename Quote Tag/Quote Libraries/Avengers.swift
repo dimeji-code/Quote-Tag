@@ -1,6 +1,6 @@
 //
 //  Avengers.swift
-//  Smite
+//  Quote Tag
 //
 //  Created by Dimeji Situ on 2019-05-26.
 //  Copyright © 2019 Dimeji Situ. All rights reserved.
@@ -24,9 +24,10 @@ class Avengers : QuoteBank{
         list.append(Quotes(q:  "\"But I do know one thing. \nIf I had, you’d never been caught.\"", a: "Wasp", f: ["Iron Man","Gamora", "Starlord"]))
         list.append(Quotes(q:  "\"It's not a loop, It's the end of the line.\"", a: "Iron Man", f: ["Dr. Strange","Hulk", "Ancient One"]))
         list.append(Quotes(q: "\"I am Groot\"", a: "Groot", f: ["Starlord","Thor","Kevin Bacon"]))
-        list.append(Quotes(q: "\"I love you 3000\"", a: "Iron Man", f: ["Spiderman","Groot","Captain America"]))
-
-        list.shuffle()
+      
+        list.append(Quotes(q: "\"You became a doctor to save one life above all others. Your own\"", a: "The ancient one", f: ["Spiderman","Mordo","Captain America"]))
+        list.append(Quotes(q: "\"No. But I can lose. Again. And again. And again. Forever. That makes you my prisoner\"", a: "Dr. Strange", f: ["Black Widow","Mordo","Captain America"]))
+        //list.shuffle()
     }
     
     

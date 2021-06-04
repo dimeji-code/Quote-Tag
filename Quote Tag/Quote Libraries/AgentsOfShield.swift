@@ -8,23 +8,23 @@
 
 import UIKit
 
-class AgentsOfShield: UIViewController {
+class AgentsOfShield: QuoteBank {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init() {
+        super.init()
+        
+                list.append(Quotes(q: "\"You can't escape without , you know, ESCAPING!.\"", a: "Deke", f: ["Jemma","Fitz","Ghostrider"] ))
+                list.append(Quotes(q: "\"Tahiti, it's a magical place.\"", a: "Coulson", f: ["Daisy","Ward","Skye"] ))
+                list.append(Quotes(q: "\"These pipes are hot. I wonder if it means this is the spa floor.\"", a: "Skye", f: ["Lance","Mockingbird","Trip"] ))
+                list.append(Quotes(q: "\"Cool origin story bro but this means nothing to me.\"", a: "Coulson", f: ["Anton","Mack","Yo-Yo"] ))
+                list.append(Quotes(q: "\"If i keep cutting her friends arms off, she will show up.\"", a: "Ruby", f: ["Yo-Yo","Mack","Jemma"] ))
+                list.append(Quotes(q: "\"I get his car now, right? Isn't that how this works?\"", a: "Coulson", f: ["Daisy","Trip","Fitz"] ))
+                list.append(Quotes(q: "\"I made a deal with the devil.\"", a: "Ghostrider", f: ["Daisy","Deke","Talbot"] ))
+        
 
-        // Do any additional setup after loading the view.
+
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

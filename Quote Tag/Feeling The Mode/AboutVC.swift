@@ -8,16 +8,15 @@
 
 import UIKit
 
-class AboutVC: UIViewController {
+class AboutVC: UIViewController /*ModeViewController*/ {
 
     @IBOutlet weak var img: UIImageView!
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var pgctrl: UIPageControl!
-    
-    override func viewDidLoad() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    var highScore : Int = 0
 
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         img.layer.shadowColor = UIColor.black.cgColor
@@ -37,12 +36,19 @@ class AboutVC: UIViewController {
         pgctrl.layer.shadowRadius = 5.0
         pgctrl.layer.shadowOpacity = 1.8
         pgctrl.layer.masksToBounds = false
+        
     }
     
 
-    @IBAction func buttonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "ModeToAbout", sender: self)
+    @IBAction func about(_ sender: Any) {
+            performSegue(withIdentifier: "ModeToAbout", sender: self)
     }
+
+  
+    
+//    @IBAction func unwindToAbt(_ sender: UIStoryboardSegue){
+//        print("HIGH SCORE IS HERE AS -> ", highScore)
+//    }
  
 
 }
