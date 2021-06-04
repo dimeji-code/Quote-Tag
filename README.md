@@ -7,7 +7,7 @@ Test your knowledge on various shows by matching quotes with characters.
 - To run app, click on Quote Tag.xcworkspace
 
 
-<img width="404" alt="Screen Shot 2021-06-04 at 9 50 38 AM" src="https://user-images.githubusercontent.com/34945097/120812998-7ef97a80-c51b-11eb-831b-b36fffd56ca5.png">......... <img width="399" alt="Screen Shot 2021-06-04 at 9 50 54 AM" src="https://user-images.githubusercontent.com/34945097/120813051-8a4ca600-c51b-11eb-9587-32b9179f2144.png">
+<img width="404" alt="Screen Shot 2021-06-04 at 9 50 38 AM" src="https://user-images.githubusercontent.com/34945097/120812998-7ef97a80-c51b-11eb-831b-b36fffd56ca5.png">.........<img width="399" alt="Screen Shot 2021-06-04 at 9 50 54 AM" src="https://user-images.githubusercontent.com/34945097/120813051-8a4ca600-c51b-11eb-9587-32b9179f2144.png">
 
 
 <img width="395" alt="Screen Shot 2021-06-04 at 9 51 09 AM" src="https://user-images.githubusercontent.com/34945097/120813066-90428700-c51b-11eb-89f9-360fd0b5afda.png">........... <img width="394" alt="Screen Shot 2021-06-04 at 9 51 30 AM" src="https://user-images.githubusercontent.com/34945097/120813088-96d0fe80-c51b-11eb-8895-b5884b8847e6.png">
